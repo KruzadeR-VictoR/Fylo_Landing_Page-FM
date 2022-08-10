@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Vars
+
+// fonts
+$openSans: "Open Sans", sans-serif;
+$raleway: "Raleway", sans-serif;
+
+// colors
+$DarkBlue: hsl(217, 28%, 15%);
+$DarkBlueMainBg: hsl(218, 28%, 13%);
+$DarkBlueFtrBg: hsl(216, 53%, 9%);
+$DarkBluetmlBg: hsl(219, 30%, 18%);
+
+$Cyan: hsl(176, 68%, 64%);
+$Blue: hsl(198, 60%, 50%);
+$LightRed: hsl(0, 100%, 63%);
+$White: hsl(0, 0%, 100%);
+$fadeWhite: rgb(192, 192, 192);
+
+// navbar
+.navbar {
+  background: $DarkBlue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  @media screen and (max-width: 600px) {
+    padding: 1rem !important;
+  }
+  .logo {
+    img {
+      height: 2rem;
+      @media screen and (max-width: 600px) {
+        height: 1.5rem;
+      }
+    }
+  }
+  .nav-Lists {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    @media screen and (max-width: 600px) {
+      gap: 1.5rem;
+    }
+    li {
+      a {
+        text-decoration: none;
+        font-family: $raleway;
+        font-size: 1rem;
+        color: $White;
+        transition: all 0.2s ease-in-out;
+      }
+      &:hover {
+        a {
+          font-weight: 700;
+          text-decoration: underline !important;
+          color: $White !important;
+        }
+      }
+    }
+  }
+}
+
+// main
+
+main {
+  // hero
+  .Landing-hero {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: $DarkBlue;
+    background-image: url(../images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    @media screen and (max-width: 600px) {
+      background-image: url(../images/bg-curvy-mobile.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom center;
+    }
+    .intro-img {
+      img {
+        height: 30rem;
+        @media screen and (max-width: 600px) {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    .intro-heading {
+      font-family: $raleway;
+      color: $White;
+    }
+    .caption {
+      width: 52vw;
+      font-family: $openSans;
+      color: rgb(192, 192, 192);
+      padding: 0.5rem 0 0.5rem;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+    .get-started {
+      cursor: pointer;
+      font-family: $raleway;
+      color: $White;
+      padding: 0.7rem 3rem;
+      border-radius: 20px;
+      background: linear-gradient(to right, $Cyan, $Blue);
+      &:hover {
+        background: $Cyan;
+      }
+    }
+  }
+
+  //   features
+
+  .features {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 3rem 2rem;
+    background: $DarkBlueMainBg;
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+    .one,
+    .two,
+    .three,
+    .four {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      text-align: center;
+      .about {
+        padding-top: 1rem;
+        .heading {
+          font-family: $raleway;
+          font-size: 1.4rem;
+          color: $White;
+          padding: 0.6rem 0;
+        }
+        .caption {
+          font-family: $openSans;
+          color: $fadeWhite;
+        }
+      }
+    }
+  }
+  //   productive
+  .productive {
+    background: $DarkBlueMainBg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    @media screen and (max-width: 600px) {
+      flex-flow: column;
+    }
+    .image {
+      flex-basis: 50%;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .about {
+      flex-basis: 50%;
+      .heading {
+        font-family: $raleway;
+        color: $White;
+        padding: 0.5rem 0;
+      }
+      .caption {
+        font-family: $openSans;
+        color: $fadeWhite;
+        padding-top: 1rem;
+        &:nth-of-type(2) {
+          padding-bottom: 1rem;
+        }
+      }
+      .how-works {
+        position: relative;
+        font-family: $raleway;
+        text-decoration: none;
+        color: $Cyan;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: fit-content;
+        transition: all 0.2s ease-in-out;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          bottom: -0.3rem;
+          left: 0;
+          background: $Cyan;
+        }
+        &:hover {
+          color: $White;
+          &::after {
+            background: $White;
+          }
+          svg use {
+            fill: $White;
+          }
+        }
+      }
+    }
+  }
+  //   testimonials
+  .testimonials {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    padding: 5rem 3rem 3rem;
+    gap: 2rem;
+    background: $DarkBlueMainBg;
+    @media screen and (max-width: 600px) {
+      flex-flow: column;
+      height: auto !important;
+    }
+    .satish,
+    .bruce,
+    .iva {
+      position: relative;
+      height: 100%;
+      padding: 3rem 2rem 2rem;
+      border-radius: 5px;
+      background: $DarkBluetmlBg;
+      z-index: 10;
+      .text {
+        font-family: $openSans;
+        font-size: 0.8rem;
+        color: $fadeWhite;
+      }
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+        img {
+          height: 2rem;
+          border-radius: 50%;
+        }
+        .details {
+          .name {
+            font-family: $raleway;
+            font-size: 0.8rem;
+            color: $White;
+          }
+          .role {
+            font-family: $openSans;
+            font-size: 0.7rem;
+            color: $fadeWhite;
+          }
+        }
+      }
+    }
+    .quote {
+      position: absolute;
+      left: -0.5rem;
+      top: -2rem;
+    }
+    .satish::before {
+      content: url(../images/bg-quotes.png);
+      position: absolute;
+      left: -0.5rem;
+      top: -2rem;
+      // z-index: 1;
+    }
+    .newsletter {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 70%;
+      transform: translate(-50%, 50%);
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 3rem;
+      border-radius: 5px;
+      background: $DarkBlue;
+      @media screen and (max-width: 600px) {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%);
+        width: 90vw;
+      }
+      .heading {
+        text-align: center;
+        font-family: $raleway;
+        //   font-size: 1.5rem;
+        color: $White;
+        @media screen and (max-width: 600px) {
+          font-size: 1.5rem;
+        }
+      }
+      .caption {
+        text-align: center;
+        font-family: $openSans;
+        font-size: 0.9rem;
+        color: $fadeWhite;
+      }
+      .subscribe {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        @media screen and (max-width: 600px) {
+          flex-flow: column;
+        }
+        input {
+          flex: 1;
+          max-width: 30rem;
+          height: 3rem;
+          border: none;
+          border-radius: 50px;
+          padding-inline: 1rem;
+          @media screen and (max-width: 600px) {
+            padding: 1rem;
+            width: 100%;
+          }
+        }
+        .getStartedFree {
+          cursor: pointer;
+          font-family: $raleway;
+          font-weight: 700;
+          padding: 0.8rem 2rem;
+          border-radius: 50px;
+          color: $White;
+          white-space: nowrap;
+          background: linear-gradient(to right bottom, $Cyan, $Blue);
+          @media screen and (max-width: 600px) {
+            width: 100%;
+            padding: 1rem 2rem;
+          }
+          &:hover {
+            background: $Cyan;
+          }
+        }
+      }
+    }
+  }
+}
+
+//   footer
+footer {
+  min-height: 30rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 5rem 2rem 2rem;
+  background: $DarkBlueFtrBg;
+  .inner-foot {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    @media screen and (max-width: 600px) {
+      padding: 0;
+    }
+    .brand {
+      align-self: flex-start;
+      img {
+        height: 2rem;
+        @media screen and (max-width: 600px) {
+          height: auto;
+        }
+      }
+    }
+    .about {
+      display: flex;
+      align-items: flex-start;
+      gap: 3rem;
+      padding-top: 1rem;
+      padding: 0.8rem 2rem;
+      @media screen and (max-width: 600px) {
+        flex-flow: column;
+        padding: 2rem 0 0;
+      }
+      .Fylo {
+        flex-basis: 40%;
+        .details {
+          display: flex;
+          gap: 1rem;
+          img {
+            height: 1rem;
+          }
+          .text {
+            width: 100%;
+            font-family: $openSans;
+            font-size: 0.9rem;
+            color: $fadeWhite;
+          }
+        }
+      }
+      .contact {
+        .mobile,
+        .mail {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          span {
+            font-family: $openSans;
+            font-size: 0.9rem;
+            color: $fadeWhite;
+          }
+        }
+        .mail {
+          padding-top: 1rem;
+        }
+      }
+      .basic-Links,
+      .important-Links {
+        list-style: none;
+        display: flex;
+        flex-flow: column;
+        gap: 0.5rem;
+        li a {
+          text-decoration: none;
+          font-family: $openSans;
+          font-size: 0.9rem;
+          color: $fadeWhite;
+          &:hover {
+            color: $White;
+            font-weight: 700;
+          }
+        }
+      }
+      .social-handles {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        @media screen and (max-width: 600px) {
+          align-self: center !important;
+        }
+        .fb,
+        .twitter,
+        .insta {
+          cursor: pointer;
+          height: 2rem;
+          width: 2rem;
+          transition: all 0.2s ease-in-out;
+          path {
+            fill: $White;
+          }
+          &:hover {
+            path {
+              fill: $Cyan;
+            }
+          }
+        }
+      }
+    }
+  }
+}

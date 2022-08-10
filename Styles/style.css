@@ -1,0 +1,694 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar {
+  background: #1c2431;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    padding: 1rem !important;
+  }
+}
+
+.navbar .logo img {
+  height: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .logo img {
+    height: 1.5rem;
+  }
+}
+
+.navbar .nav-Lists {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .nav-Lists {
+    gap: 1.5rem;
+  }
+}
+
+.navbar .nav-Lists li a {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: white;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar .nav-Lists li:hover a {
+  font-weight: 700;
+  text-decoration: underline !important;
+  color: white !important;
+}
+
+main .Landing-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #1c2431;
+  background-image: url(../images/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;
+}
+
+@media screen and (max-width: 600px) {
+  main .Landing-hero {
+    background-image: url(../images/bg-curvy-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+  }
+}
+
+main .Landing-hero .intro-img img {
+  height: 30rem;
+}
+
+@media screen and (max-width: 600px) {
+  main .Landing-hero .intro-img img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+main .Landing-hero .intro-heading {
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+
+main .Landing-hero .caption {
+  width: 52vw;
+  font-family: "Open Sans", sans-serif;
+  color: silver;
+  padding: 0.5rem 0 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  main .Landing-hero .caption {
+    width: 100%;
+  }
+}
+
+main .Landing-hero .get-started {
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  padding: 0.7rem 3rem;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#339ecc));
+  background: linear-gradient(to right, #65e2d9, #339ecc);
+}
+
+main .Landing-hero .get-started:hover {
+  background: #65e2d9;
+}
+
+main .features {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  padding: 3rem 2rem;
+  background: #181f2a;
+}
+
+@media screen and (max-width: 600px) {
+  main .features {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+main .features .one,
+main .features .two,
+main .features .three,
+main .features .four {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+main .features .one .about,
+main .features .two .about,
+main .features .three .about,
+main .features .four .about {
+  padding-top: 1rem;
+}
+
+main .features .one .about .heading,
+main .features .two .about .heading,
+main .features .three .about .heading,
+main .features .four .about .heading {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  color: white;
+  padding: 0.6rem 0;
+}
+
+main .features .one .about .caption,
+main .features .two .about .caption,
+main .features .three .about .caption,
+main .features .four .about .caption {
+  font-family: "Open Sans", sans-serif;
+  color: silver;
+}
+
+main .productive {
+  background: #181f2a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  main .productive {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+
+main .productive .image {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+main .productive .image img {
+  height: 100%;
+  width: 100%;
+}
+
+main .productive .about {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+main .productive .about .heading {
+  font-family: "Raleway", sans-serif;
+  color: white;
+  padding: 0.5rem 0;
+}
+
+main .productive .about .caption {
+  font-family: "Open Sans", sans-serif;
+  color: silver;
+  padding-top: 1rem;
+}
+
+main .productive .about .caption:nth-of-type(2) {
+  padding-bottom: 1rem;
+}
+
+main .productive .about .how-works {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  color: #65e2d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+main .productive .about .how-works::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: -0.3rem;
+  left: 0;
+  background: #65e2d9;
+}
+
+main .productive .about .how-works:hover {
+  color: white;
+}
+
+main .productive .about .how-works:hover::after {
+  background: white;
+}
+
+main .productive .about .how-works:hover svg use {
+  fill: white;
+}
+
+main .testimonials {
+  position: relative;
+  min-height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5rem 3rem 3rem;
+  gap: 2rem;
+  background: #181f2a;
+}
+
+@media screen and (max-width: 600px) {
+  main .testimonials {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    height: auto !important;
+  }
+}
+
+main .testimonials .satish,
+main .testimonials .bruce,
+main .testimonials .iva {
+  position: relative;
+  height: 100%;
+  padding: 3rem 2rem 2rem;
+  border-radius: 5px;
+  background: #202a3c;
+  z-index: 10;
+}
+
+main .testimonials .satish .text,
+main .testimonials .bruce .text,
+main .testimonials .iva .text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  color: silver;
+}
+
+main .testimonials .satish .user,
+main .testimonials .bruce .user,
+main .testimonials .iva .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+main .testimonials .satish .user img,
+main .testimonials .bruce .user img,
+main .testimonials .iva .user img {
+  height: 2rem;
+  border-radius: 50%;
+}
+
+main .testimonials .satish .user .details .name,
+main .testimonials .bruce .user .details .name,
+main .testimonials .iva .user .details .name {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+  color: white;
+}
+
+main .testimonials .satish .user .details .role,
+main .testimonials .bruce .user .details .role,
+main .testimonials .iva .user .details .role {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7rem;
+  color: silver;
+}
+
+main .testimonials .quote {
+  position: absolute;
+  left: -0.5rem;
+  top: -2rem;
+}
+
+main .testimonials .satish::before {
+  content: url(../images/bg-quotes.png);
+  position: absolute;
+  left: -0.5rem;
+  top: -2rem;
+}
+
+main .testimonials .newsletter {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 70%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+  padding: 3rem;
+  border-radius: 5px;
+  background: #1c2431;
+}
+
+@media screen and (max-width: 600px) {
+  main .testimonials .newsletter {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    width: 90vw;
+  }
+}
+
+main .testimonials .newsletter .heading {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  main .testimonials .newsletter .heading {
+    font-size: 1.5rem;
+  }
+}
+
+main .testimonials .newsletter .caption {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  color: silver;
+}
+
+main .testimonials .newsletter .subscribe {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  main .testimonials .newsletter .subscribe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+
+main .testimonials .newsletter .subscribe input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 30rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50px;
+  padding-inline: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  main .testimonials .newsletter .subscribe input {
+    padding: 1rem;
+    width: 100%;
+  }
+}
+
+main .testimonials .newsletter .subscribe .getStartedFree {
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  color: white;
+  white-space: nowrap;
+  background: -webkit-gradient(linear, left top, right bottom, from(#65e2d9), to(#339ecc));
+  background: linear-gradient(to right bottom, #65e2d9, #339ecc);
+}
+
+@media screen and (max-width: 600px) {
+  main .testimonials .newsletter .subscribe .getStartedFree {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+}
+
+main .testimonials .newsletter .subscribe .getStartedFree:hover {
+  background: #65e2d9;
+}
+
+footer {
+  min-height: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5rem 2rem 2rem;
+  background: #0b1523;
+}
+
+footer .inner-foot {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.8rem 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  footer .inner-foot {
+    padding: 0;
+  }
+}
+
+footer .inner-foot .brand {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+footer .inner-foot .brand img {
+  height: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  footer .inner-foot .brand img {
+    height: auto;
+  }
+}
+
+footer .inner-foot .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 3rem;
+  padding-top: 1rem;
+  padding: 0.8rem 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  footer .inner-foot .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    padding: 2rem 0 0;
+  }
+}
+
+footer .inner-foot .about .Fylo {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+footer .inner-foot .about .Fylo .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+footer .inner-foot .about .Fylo .details img {
+  height: 1rem;
+}
+
+footer .inner-foot .about .Fylo .details .text {
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  color: silver;
+}
+
+footer .inner-foot .about .contact .mobile,
+footer .inner-foot .about .contact .mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+footer .inner-foot .about .contact .mobile span,
+footer .inner-foot .about .contact .mail span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  color: silver;
+}
+
+footer .inner-foot .about .contact .mail {
+  padding-top: 1rem;
+}
+
+footer .inner-foot .about .basic-Links,
+footer .inner-foot .about .important-Links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 0.5rem;
+}
+
+footer .inner-foot .about .basic-Links li a,
+footer .inner-foot .about .important-Links li a {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  color: silver;
+}
+
+footer .inner-foot .about .basic-Links li a:hover,
+footer .inner-foot .about .important-Links li a:hover {
+  color: white;
+  font-weight: 700;
+}
+
+footer .inner-foot .about .social-handles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  footer .inner-foot .about .social-handles {
+    -ms-flex-item-align: center !important;
+        -ms-grid-row-align: center !important;
+        align-self: center !important;
+  }
+}
+
+footer .inner-foot .about .social-handles .fb,
+footer .inner-foot .about .social-handles .twitter,
+footer .inner-foot .about .social-handles .insta {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+footer .inner-foot .about .social-handles .fb path,
+footer .inner-foot .about .social-handles .twitter path,
+footer .inner-foot .about .social-handles .insta path {
+  fill: white;
+}
+
+footer .inner-foot .about .social-handles .fb:hover path,
+footer .inner-foot .about .social-handles .twitter:hover path,
+footer .inner-foot .about .social-handles .insta:hover path {
+  fill: #65e2d9;
+}
+/*# sourceMappingURL=style.css.map */
