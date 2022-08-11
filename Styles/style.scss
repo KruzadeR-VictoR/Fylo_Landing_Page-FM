@@ -332,11 +332,10 @@ main {
         }
         input {
           flex: 1;
-          max-width: 30rem;
-          height: 3rem;
+          max-width: 30rem;        
           border: none;
           border-radius: 50px;
-          padding-inline: 1rem;
+          padding: 1rem;
           @media screen and (max-width: 600px) {
             padding: 1rem;
             width: 100%;
@@ -476,4 +475,13 @@ footer {
       }
     }
   }
+}
+
+// utilities
+.error {
+  display: block;
+  text-align: left;
+  font-family: $raleway;
+  font-size: 0.8rem;
+  color: orangered;
 }

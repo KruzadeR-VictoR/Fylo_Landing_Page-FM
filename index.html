@@ -213,13 +213,17 @@
             would be happy to help you.
           </p>
           <div class="subscribe">
-            <input
-              type="email"
-              name="mailId"
-              id="email"
-              placeholder="email@example.com"
-              required
-            />
+            <label for="email">
+              <input
+                type="email"
+                name="mailId"
+                id="email"
+                placeholder="email@example.com"
+                onchange="validate(event)"
+                required
+              />
+              <span class="error"></span>
+            </label>
             <button type="submit" class="getStartedFree">
               Get Started For Free
             </button>
@@ -341,5 +345,7 @@
       </div>
     </footer>
     <!-- footer  -->
+    <!-- JS Linked  -->
+    <script src="./script.js"></script>
   </body>
 </html>
